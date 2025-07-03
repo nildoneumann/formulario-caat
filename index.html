@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulário C.A.A.T.</title>
+  <meta name="theme-color" content="#FFD700">
+  <link rel="icon" sizes="192x192" href="icon-192.png">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 15px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+    h1 {
+      font-size: 26px;
+    }
+    h2 {
+      margin-top: 8px;
+      font-size: 22px;
+    }
+    label {
+      display: block;
+      margin-top: 6px;
+    }
+    input, select, textarea {
+      width: 80%;
+      padding: 6px;
+      margin-top: 3px;
+      font-size: 16px;
+      font-weight: bold;
+    }
+    .section {
+      border: 1px solid #ccc;
+      padding: 6px;
+      margin-top: 8px;
+      background-color: #FFD700;
+    }
+    .btn-container {
+      margin-top: 10px;
+    }
+    button {
+      padding: 10px 15px;
+      margin-right: 10px;
+      font-size: 16px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>Formulário C.A.A.T.</h1>
+  <div id="formulario">
+    <div class="section">
+      <h2>Controle de Atendimento a Acidente de Trânsito</h2>
+      <label>Vítima:(s):
+        <select name="Vítima">
+          <option>NÃO</option>
+          <option>SIM</option>
+        </select>
+      </label>
+      <label>Solicitação:
+        <select name="Solicitação">
+          <option>Via central</option>
+          <option>Populares</option>
+          <option>Fato constatado durante PTRM</option>
+        </select>
+      </label>
+      <label>Hora da chegada: <input type="time" name="hora_chegada"></label>
+      <label>VTR(s): <input type="text" name="vtrs"></label>
+      <label>Agente(s): <input type="text" name="agentes"></label>
+    </div>
+    <div class="section">
+      <h2>Dados do Acidente</h2>
+      <label>Data: <input type="date" name="data_acidente"></label>
+      <label>Hora Provável do Fato: <input type="time" name="hora_fato"></label>
+      <label>Local: <input type="text" name="local"></label>
+      <label>Tipo:
+        <select name="Tipo">
+          <option>Abalroamento transversal</option>
+          <option>Abalroamento lateral</option>
+          <option>Colisão traseira</option>
+          <option>Colisão frontal</option>
+          <option>Capotamento</option>
+          <option>Tombamento</option>
+          <option>Choque</option>
+          <option>Atropelamento</option>
+          <option>Complexo</option>
+        </select>
+      </label>
+    </div>
+    <div class="section">
+      <h2>Envolvido V1</h2>
+      <label>Placa: <input type="text" name="v1_placa"></label>
+      <label>Marca/Modelo: <input type="text" name="v1_modelo"></label>
+      <label>Cor: <input type="text" name="v1_cor"></label>
+      <label>Condutor: <input type="text" name="v1_condutor"></label>
+      <label>CPF: <input type="text" name="v1_cpf"></label>
+      <label>RG: <input type="text" name="v1_rg"></label>
+      <label>Endereço: <input type="text" name="v1_endereco"></label>
+      <label>Vítima:
+        <select name="v1_vitima">
+          <option>NÃO</option>
+          <option>Condutor</option>
+          <option>Passageiro</option>
+          <option>pedestre</option>
+        </select>
+      </label>
+      <label>Atendimento:
+        <select name="v1_atendimento">
+          <option>NÃO</option>
+          <option>Bombeiros</option>
+          <option>SAMU</option>
+          <option>P.M</option>
+          <option>Populares</option>
+        </select>
+      </label>
+      <label>Viatura:(s): <input type="text" name="v1_vtr"></label>
+    </div>
+    <div class="section">
+      <h2>Envolvido V2</h2>
+      <label>Placa: <input type="text" name="v2_placa"></label>
+      <label>Marca/Modelo: <input type="text" name="v2_modelo"></label>
+      <label>Cor: <input type="text" name="v2_cor"></label>
+      <label>Condutor: <input type="text" name="v2_condutor"></label>
+      <label>CPF: <input type="text" name="v2_cpf"></label>
+      <label>RG: <input type="text" name="v2_rg"></label>
+      <label>Endereço: <input type="text" name="v2_endereco"></label>
+      <label>Vítima:
+        <select name="v2_vitima">
+          <option>NÃO</option>
+          <option>Condutor</option>
+          <option>Passageiro</option>
+          <option>pedestre</option>
+        </select>
+      </label>
+      <label>Atendimento:
+        <select name="v2_atendimento">
+          <option>NÃO</option>
+          <option>Bombeiros</option>
+          <option>SAMU</option>
+          <option>P.M</option>
+          <option>Populares</option>
+        </select>
+      </label>
+      <label>Viatura:(s): <input type="text" name="v2_vtr"></label>
+    </div>
+    <div class="section">
+      <h2>Dados sobre prevenção do local:</h2>
+      <label>Via já liberada na chegada do Agente Municipal de Trânsito: <input type="checkbox" name="via_liberada"></label>
+      <label>Solicitada a liberação da via, conforme Art.178 da lei 9.503/97.Orientadas as vítimas: <input type="checkbox" name="solicitada_liberacao"></label>
+      <label>Local preservado:
+        <select name="local_preservado">
+          <option>NÃO</option>
+          <option>Liberado após a chegada P.M</option>
+          <option>Liberado após a chegada SAMU</option>
+          <option>Liberado após a chegada Bombeiros</option>
+          <option>Liberado após a chegada Polícia Científica</option>
+        </select>
+      </label>
+      <label>Observações: <textarea name="observacoes"></textarea></label>
+    </div>
+    <div class="section">
+      <label>Agente Responsável: <input type="text" name="agente_resp"></label>
+      <label>Assinatura: <input type="text" name="assinatura"></label>
+    </div>
+  </div>
+  <div class="btn-container">
+    <button onclick="gerarPDF()">Baixar PDF</button>
+  </div>
+  <script>
+    function gerarPDF() {
+      const element = document.getElementById("formulario");
+      html2pdf()
+        .set({
+          margin: [10, 10, 10, 10],
+          filename: 'formulario_caat.pdf',
+          image: { type: 'jpeg', quality: 0.98 },
+          html2canvas: { scale: 4, useCORS: true, scrollY: 0 },
+          jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+        })
+        .from(element)
+        .save();
+    }
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('sw.js')
+        .then(reg => console.log('Service Worker registrado'))
+        .catch(err => console.error('Erro ao registrar o SW', err));
+    }
+  </script>
+</body>
+</html>
