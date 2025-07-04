@@ -153,6 +153,39 @@
       </label>
       <label>Viatura:(s): <input type="text" name="v2_vtr"></label>
     </div>
+    <input type="checkbox" id="toggleV3" onclick="mostrarOcultarV3()"> Incluir Envolvido V3
+      </label>
+     <div id="envolvidoV3" class="section" style="display: none;">
+      <h2>Envolvido V3</h2>
+      <label>Placa: <input type="text" name="v3_placa"></label>
+      <label>Marca/Modelo: <input type="text" name="v3_modelo"></label>
+      <label>Cor: <input type="text" name="v3_cor"></label>
+      <label>Condutor: <input type="text" name="v3_condutor"></label>
+      <label>CPF: <input type="text" name="v3_cpf"></label>
+      <label>RG: <input type="text" name="v3_rg"></label>
+      <label>Endereço: <input type="text" name="v3_endereco"></label>
+      <label>Vítima:
+        <select name="v3_vitima">
+          <option>selecione</option>
+          <option>NÃO</option>
+          <option>Condutor</option>
+          <option>Passageiro</option>
+          <option>pedestre</option>
+        </select>
+      </label>
+      <label>Atendimento:
+        <select name="v3_atendimento">
+          <option>selecione</option>
+          <option>NÃO</option>
+          <option>Bombeiros</option>
+          <option>SAMU</option>
+          <option>P.M</option>
+          <option>Populares</option>
+        </select>
+      </label>
+      <label>Viatura:(s): <input type="text" name="v3_vtr"></label>
+    </div>
+
     <div class="section">
       <h2>Dados sobre prevenção do local:</h2>
       <label>Via já liberada na chegada do Agente Municipal de Trânsito: <input type="checkbox" name="via_liberada"></label>
