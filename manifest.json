@@ -1,10 +1,10 @@
 {
-  "name": "Formul\u00e1rio C.A.A.T.",
+  "name": "Formulário C.A.A.T.",
   "short_name": "C.A.A.T.",
   "start_url": ".",
   "display": "standalone",
   "background_color": "#FFD700",
-  "theme_color": "#FFD700",
+  "theme_color": "#ADD8E6",
   "icons": [
     {
       "src": "icon-192.png",
