@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Formulário C.A.A.T.</title>
-  <meta name="theme-color" content="#FFD700">
+  <meta name="theme-color" content="#ADD8E6">
   <link rel="icon" sizes="192x192" href="icon-192.png">
   <link rel="manifest" href="manifest.json">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
@@ -35,7 +35,7 @@
     .section {
       border: 1px solid #ccc;
       padding: 6px;
-      margin-top: 8px;
+      margin-top:9px;
       background-color: #FFD700;
     }
     .btn-container {
@@ -153,7 +153,8 @@
       </label>
       <label>Viatura:(s): <input type="text" name="v2_vtr"></label>
     </div>
-    <input type="checkbox" id="toggleV3" onclick="mostrarOcultarV3()"> Incluir Envolvido V3
+      <label>
+        <input type="checkbox" id="toggleV3" onclick="mostrarOcultarV3()"> Incluir Envolvido V3
       </label>
      <div id="envolvidoV3" class="section" style="display: none;">
       <h2>Envolvido V3</h2>
@@ -166,7 +167,7 @@
       <label>Endereço: <input type="text" name="v3_endereco"></label>
       <label>Vítima:
         <select name="v3_vitima">
-          <option>selecione</option>
+          <option>Selecione</option>
           <option>NÃO</option>
           <option>Condutor</option>
           <option>Passageiro</option>
@@ -175,7 +176,7 @@
       </label>
       <label>Atendimento:
         <select name="v3_atendimento">
-          <option>selecione</option>
+          <option>Selecione</option>
           <option>NÃO</option>
           <option>Bombeiros</option>
           <option>SAMU</option>
@@ -208,7 +209,7 @@
     </div>
   </div>
   <div class="btn-container">
-    <button onclick="gerarPDF()">Baixar PDF</button>
+    <button onclick="gerarPDF()"style="background-color: #ADD8E6;">Baixar PDF</button>
   </div>
   <script>
     function gerarPDF() {
@@ -223,13 +224,13 @@
         })
         .from(element)
         .save();
-      function mostrarOcultarV3() {
+    }
+function mostrarOcultarV3() {
       const checkbox = document.getElementById("toggleV3");
       const section = document.getElementById("envolvidoV3");
       section.style.display = checkbox.checked ? "block" : "none";
     }
 
-    }
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('sw.js')
         .then(reg => console.log('Service Worker registrado'))
