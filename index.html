@@ -190,6 +190,12 @@
         })
         .from(element)
         .save();
+      function mostrarOcultarV3() {
+      const checkbox = document.getElementById("toggleV3");
+      const section = document.getElementById("envolvidoV3");
+      section.style.display = checkbox.checked ? "block" : "none";
+    }
+
     }
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('sw.js')
