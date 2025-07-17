@@ -27,7 +27,7 @@
     }
     label {
       display: block;
-      margin-top: 4px;
+      margin-top: 2px;
     }
     input, select, textarea {
       width: 80%;
@@ -41,7 +41,7 @@
     .section {
       border: 1px solid #ccc;
       padding: 6px;
-      margin-top: 2px;
+      margin-top: 1px;
       background-color: #FFD700;
     }
     .btn-container {
@@ -52,6 +52,7 @@
       margin-right: 10px;
       font-size: 16px;
       font-weight: bold;
+      border-radius: 8px; /* Cantos arredondados */
     }
     .linha-horizontal, .linha-horizontal-2, .linha-horizontal-3, .linha-horizontal-4, .linha-horizontal-5 {
       display: flex;
@@ -65,10 +66,9 @@
   </style>
 </head>
 <body>
-  <h1>Formulário C.A.A.T.</h1>
+  <h1><u>Controle de Atendimento a Acidente de Trânsito</u></h1>
   <div id="formulario">
-    <div class="section">
-      <h2>Controle de Atendimento a Acidente de Trânsito</h2>
+    <div class="section"> 
       <div class="linha-horizontal">
         <label>Vítima(s):
           <select name="Vítima">
@@ -97,7 +97,7 @@
     <!-- ... -->
 
     <div class="section">
-      <h2>Dados do Acidente</h2>
+      <label style="color: darkgreen;">Dados do Acidente</label>
 <div class="linha-horizontal-2">
       <label>Data: <input type="date" name="data_acidente"></label>
       <label>Hora Provável do Fato: <input type="time" name="hora_fato"></label>
@@ -123,7 +123,7 @@
     <!-- Mantive para não estender demais a resposta -->
     <!-- Se quiser posso mandar com tudo -->
 <div class="section">
-      <h2>Envolvido V1</h2>
+      <label style="color: darkgreen;">Envolvido V1</label>
 <div class="linha-horizontal-3">
       <label>Placa: <input type="text" name="v1_placa"></label>
       <label>Cor: <input type="text" name="v1_cor"></label>
@@ -154,7 +154,7 @@
         <input type="checkbox" id="toggleV2" onclick="mostrarOcultarV2()"> Incluir Envolvido V2
       </label>
     <div id="envolvidoV2" class="section" style="display: none;">
-      <h2>Envolvido V2</h2>
+      <label style="color: darkgreen;">Envolvido V2</label>
 <div class="linha-horizontal-3">
       <label>Placa: <input type="text" name="v2_placa"></label>
       <label>Cor: <input type="text" name="v2_cor"></label>     
@@ -185,7 +185,7 @@
         <input type="checkbox" id="toggleV3" onclick="mostrarOcultarV3()"> Incluir Envolvido V3
       </label>
      <div id="envolvidoV3" class="section" style="display: none;">
-      <h2>Envolvido V3</h2>
+      <label style="color: darkgreen;">Envolvido V3</label>
 <div class="linha-horizontal-3">
       <label>Placa: <input type="text" name="v3_placa"></label>
       <label>Cor: <input type="text" name="v3_cor"></label>
